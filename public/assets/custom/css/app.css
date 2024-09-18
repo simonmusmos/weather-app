@@ -1,0 +1,193 @@
+body {
+    /* max-height: 100vh; */
+    overflow: hidden;
+}
+.nav li a {
+    font-size: 20px;
+    color:#18272F;
+    font-weight: 700;
+    font-family: 'Manrope', sans-serif;
+}
+
+.navbar-nav {
+    font-weight: 700;
+    font-family: 'Manrope', sans-serif;
+}
+
+#status-bar {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Manrope', sans-serif;
+}
+
+.nav li {
+    margin-left: 100px !important;
+}
+
+.nav li:first-child {
+    margin-left: 0px !important;
+}
+
+.main-menu-right a {
+    font-size: 25px;
+    color:#18272F;
+}
+
+.main-menu-right {
+    margin: auto;
+    margin-right: 1px;
+}
+
+.offcanvas-header{ 
+    display:none; 
+}
+
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(24, 39, 47, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+
+.navbar-expand-lg {
+    margin: auto;
+    margin-right: 1px;
+} 
+
+.bg-primary {
+    background-color: #326942 !important;
+    color: #F0F0F0 !important;
+}
+
+.bg-black {
+    background-color: black !important;
+    color: #F0F0F0 !important;
+}
+
+.weather-card, .detail-card {
+    background-clip: content-box;
+    background-position: center;
+    border-radius: 25px; 
+    /* height: 150px; */
+    background-size: cover;
+}
+
+.frosted-container {
+    /* width: 300px;
+    padding: 20px; */
+    border-radius: 10px;
+    backdrop-filter: blur(3px); /* Apply blur effect */
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add some shadow */
+    text-align: left;
+    color: #fff;
+}
+
+.scrollable {
+    height: 100%;
+    max-height: 85vh; /* Set maximum height to viewport height */
+    overflow: auto; /* Allow scrolling */
+    padding-right: 15px; /* Add padding to account for scrollbar */
+    box-sizing: content-box; /* Ensure padding doesn't affect height */
+}
+
+/* Hide scrollbars but keep scrolling */
+.scrollable::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers */
+}
+
+.scrollable {
+    -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer and Edge */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Fill the viewport height */
+}
+
+.sub-content {
+    flex: 1; /* Take up the remaining space */
+    display: flex; /* Use flexbox to align columns */
+    overflow: hidden; /* Prevent overflow */
+}
+
+.h7 {
+    font-size: 75rem !important;
+}
+
+.h8 {
+    font-size: 55rem !important;
+}
+
+.h9 {
+    font-size: 45rem !important;
+}
+
+.text-middle {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.custom-border-bottom {
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+}
+
+#loader {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.75) url("/assets/images/gif/loader.gif") no-repeat center center;
+    z-index: 99999;
+}
+
+#search-bar {
+    background-color: #222;
+    padding: 15px;
+    border-radius: 25px;
+    border: 1.5px solid #444;
+    font-size: 22px;
+    color: #fff;
+}
+
+.top-right-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1rem;
+}
+
+@media (max-width: 1000px) {
+    #large-user-control {
+        display: none !important ;
+    }
+
+    .offcanvas-header { 
+        display:block; 
+    }
+    .navbar-collapse {
+        position: fixed;
+        top:0; 
+        bottom: 0;
+        left: 100%;
+        width: 100%;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        overflow-y: auto;
+        visibility: hidden;
+        background-color: black;
+        transition: visibility .2s ease-in-out, -webkit-transform .2s ease-in-out;
+    }
+    .navbar-collapse.show {
+        visibility: visible;
+        transform: translateX(-100%);
+    }
+}
+
+@media (min-width: 1001px) {
+    #small-user-control {
+        display: none !important ;
+    }
+}
